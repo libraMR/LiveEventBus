@@ -42,10 +42,11 @@ protected void onResume() {
 ### 发送普通消息 
 ```
  ArrayList<Bean> list = new ArrayList<>();
-        Bean bean = new Bean();
-        bean.setName("张三");
-        list.add(bean);
-        LiveEventBus.getInstance().with("key_test").setValue(list);
+ Bean bean = new Bean();
+ bean.setName("张三");
+ list.add(bean);
+ 
+ LiveEventBus.getInstance().with("key_test").setValue(list);
 ``` 
 ### 订阅接收(在Activity的OnResume()操作)
 ```
