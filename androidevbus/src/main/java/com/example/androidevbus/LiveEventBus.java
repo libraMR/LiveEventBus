@@ -13,19 +13,19 @@ import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-public class AndroidEvBus<T> {
+public class LiveEventBus<T> {
 
     private WeakHashMap<String, MyMutableLiveData<T>> mLiveDatas = new WeakHashMap<>();
     private static String removeKey;
-    private AndroidEvBus() {
+    private LiveEventBus() {
 
     }
 
     private static class LiveEventBusHolder{
-        private static final AndroidEvBus INSTANCE = new AndroidEvBus();
+        private static final LiveEventBus INSTANCE = new LiveEventBus();
     }
 
-    public static AndroidEvBus getInstance() {
+    public static LiveEventBus getInstance() {
         return LiveEventBusHolder.INSTANCE;
     }
 
