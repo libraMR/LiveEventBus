@@ -20,7 +20,8 @@ Step 2. Add the dependency
 	        implementation 'com.github.libraMR:LiveEventBus:v2.1'
 	}  	 
 ## 普通消息 
-#### 例子1(String类型):  
+### 例子1(String类型):  
+### 发送消息
 ```
 LiveEventBus.getInstance().with("key_name").setValue("1111");
 ```
@@ -38,7 +39,8 @@ protected void onResume() {
                	});
 }
 ```  
-#### 例子2(List类型):
+### 例子2(List类型):  
+### 发送消息
 ```
  ArrayList<Bean> list = new ArrayList<>();
  Bean bean = new Bean();
