@@ -19,12 +19,12 @@ Step 2. Add the dependency
 	dependencies {
 	        implementation 'com.github.libraMR:LiveEventBus:v2.1'
 	}  	 
-## 例子1(String类型):  
-### 发送普通消息 
+## 普通消息 
+#### 例子1(String类型):  
 ```
 LiveEventBus.getInstance().with("key_name").setValue("1111");
 ```
-### 订阅接收(在Activity的OnResume()操作)
+#### 订阅接收(在Activity的OnResume()操作)
 ```
 @Override
 protected void onResume() {
@@ -38,8 +38,7 @@ protected void onResume() {
                	});
 }
 ```  
-## 例子2(List类型):
-### 发送普通消息 
+#### 例子2(List类型):
 ```
  ArrayList<Bean> list = new ArrayList<>();
  Bean bean = new Bean();
@@ -48,7 +47,7 @@ protected void onResume() {
  
  LiveEventBus.getInstance().with("key_test").setValue(list);
 ``` 
-### 订阅接收(在Activity的OnResume()操作)
+#### 订阅接收(在Activity的OnResume()操作)
 ```
 @Override
 protected void onResume() {
