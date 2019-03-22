@@ -1,7 +1,7 @@
 # LiveEventBus
 ## 好用的事件传递工具.
-## 生命周期感知，自动取消订阅
-## 当Activity处于活跃状态即OnResume()时候,可以接收消息,当Activity销毁时不接收消息,再次进入Activity可正常接收消息.
+- [x]  生命周期感知，自动取消订阅
+- [x]  当Activity处于活跃状态即OnResume()时候,可以接收消息,当Activity销毁时不接收消息,再次进入Activity可正常接收消息.
 
 ####  根目录下build.gradle配置:
 Add it in your root build.gradle at the end of repositories:
