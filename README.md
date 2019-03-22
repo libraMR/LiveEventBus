@@ -1,5 +1,6 @@
 # LiveEventBus
 好用的事件传递工具.
+
 根目录下build.gradle配置:
 Add it in your root build.gradle at the end of repositories:
 
