@@ -17,3 +17,36 @@ Step 2. Add the dependency
 	dependencies {
 	        implementation 'com.github.libraMR:LiveEventBus:v2.1'
 	}
+	
+	
+	
+发送普通消息
+例子1(String类型):
+LiveEventBus.getInstance().with("key_name").setValue("1111");
+接收
+LiveEventBus.getInstance()
+               .with("key_name")
+               .observe(this, new Observer<String>() {
+                   @Override
+                   public void onChanged(@Nullable String string) {
+
+                   }
+               });
+例子2(List类型):
+ ArrayList<Bean> list = new ArrayList<>();
+        Bean bean = new Bean();
+        bean.setName("张三");
+        list.add(bean);
+        LiveEventBus.getInstance().with("key_test").setValue(list);
+接收
+LiveEventBus.getInstance()
+                .with("key_test")
+                .observe(this, new Observer<List<Bean>>() {
+                    @Override
+                    public void onChanged(@Nullable List<Bean> bean) {
+                        for (Bean item : bean) {
+                            Toast.makeText(getApplicationContext(),item.getName(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+	       
