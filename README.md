@@ -1,7 +1,7 @@
 # LiveEventBus
-好用的事件传递工具.
+## 好用的事件传递工具.
 
-根目录下build.gradle配置:
+####  根目录下build.gradle配置:
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
@@ -11,19 +11,19 @@ Add it in your root build.gradle at the end of repositories:
 		}
 	}
  
-App目录下build.gradle配置:
+#### App目录下build.gradle配置:
 Step 2. Add the dependency
 
 	dependencies {
 	        implementation 'com.github.libraMR:LiveEventBus:v2.1'
-	}
-	
-	
-	
-发送普通消息
-例子1(String类型):
+	}  	 
+## 例子1(String类型):  
+### 发送普通消息 
+```
 LiveEventBus.getInstance().with("key_name").setValue("1111");
-接收
+```
+### 订阅接收
+```
 LiveEventBus.getInstance()
                .with("key_name")
                .observe(this, new Observer<String>() {
@@ -32,13 +32,18 @@ LiveEventBus.getInstance()
 
                    }
                });
-例子2(List类型):
+```  
+## 例子2(List类型):
+### 发送普通消息 
+```
  ArrayList<Bean> list = new ArrayList<>();
         Bean bean = new Bean();
         bean.setName("张三");
         list.add(bean);
         LiveEventBus.getInstance().with("key_test").setValue(list);
-接收
+``` 
+### 订阅接收
+```
 LiveEventBus.getInstance()
                 .with("key_test")
                 .observe(this, new Observer<List<Bean>>() {
@@ -49,4 +54,4 @@ LiveEventBus.getInstance()
                         }
                     }
                 });
-	       
+```
