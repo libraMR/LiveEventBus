@@ -32,7 +32,7 @@ protected void onResume() {
                	.observe(this, new Observer<String>() {
                   	 @Override
                    	public void onChanged(@Nullable String string) {
-
+				Toast.makeText(getApplicationContext(),string,Toast.LENGTH_SHORT).show();
                    	}
                	});
 }
@@ -55,10 +55,10 @@ protected void onResume() {
                 .observe(this, new Observer<List<Bean>>() {
                     	@Override
                     	public void onChanged(@Nullable List<Bean> bean) {
-                        	for (Bean item : bean) {
+                            for (Bean item : bean) {
                             	Toast.makeText(getApplicationContext(),item.getName(),Toast.LENGTH_SHORT).show();
-                        	}
-                    	}
-                	});
+                              }
+                    	  }
+                  });
 }
 ```
